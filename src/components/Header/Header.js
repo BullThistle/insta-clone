@@ -1,19 +1,18 @@
 import React from 'react';
+import { Menu, Image } from 'semantic-ui-react';
 
-class Header extends React.Component {
-  render() {
-    return (
-      <nav className="Nav">
-        <div className="Nav-menus">
-          <div className="Nav-brand">
-            <a className="Nav-brand-logo" href="/">
-              Instagram
-            </a>
-          </div>
-        </div>
-      </nav>
-    );
-  }
-}
+const Header = () => {
+  return (
+    <Menu fixed="top">
+      <Menu.Item as="a" header>
+        <Image
+          src={require('./insta.png')}
+          style={{ marginRight: '1.5em', marginLeft: '15em', width: '20px' }}
+        />
+        Insta Clone
+      </Menu.Item>
+    </Menu>
+  );
+};
 
 export default Header;
